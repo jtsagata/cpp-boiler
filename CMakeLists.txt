@@ -18,6 +18,10 @@ project("cpp-boiler"
 configure_file( ${CMAKE_SOURCE_DIR}/support/.project_vars.sh.in
                 ${CMAKE_SOURCE_DIR}/support/project_vars.sh @ONLY)
 
+if(NOT EXISTS "${CMAKE_SOURCE_DIR}/README.md")
+    configure_file( ${CMAKE_SOURCE_DIR}/support/README_in.md ${CMAKE_SOURCE_DIR}/README.md @ONLY)
+endif()
+
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/support/cmake)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/support/cmake/modules)
 
