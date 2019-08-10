@@ -1,0 +1,25 @@
+<!-- HTML footer for doxygen 1.8.13-->
+<a class="github-fork-ribbon" href="@REPOSITORY_URL@" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<!-- start footer part -->
+<!--BEGIN GENERATE_TREEVIEW-->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    $navpath
+    <li class="footer-left">
+        <a href="https://jtsagata.github.io/cpp-boiler/"><img class="footer" style="width:32px;" src="$relpath^cpp-boiler.png" alt="cpp-boiler project"/></a>
+        using
+            <a href="https://jtsagata.github.io/cpp-boiler/">cpp-boiler</a>
+             </li>
+    <li class="footer">$generatedby<a href="http://www.doxygen.org/index.html"><img class="footer"  src="$relpath^doxygen.png" alt="doxygen"/></a> $doxygenversion </li>
+  </ul>
+</div>
+<!--END GENERATE_TREEVIEW-->
+<!--BEGIN !GENERATE_TREEVIEW-->
+<hr class="footer"/><address class="footer"><small>
+$generatedby &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="$relpath^doxygen.png" alt="doxygen"/>
+</a> $doxygenversion
+</small></address>
+<!--END !GENERATE_TREEVIEW-->
+</body>
+</html>
