@@ -1,0 +1,11 @@
+#ifndef _CONFIG_H_
+#define _CONFIG_H_
+
+// Automatically populated from Cmake Project
+inline const char * const PROJECT_NAME="@PROJECT_NAME@";
+inline const char * const PROJECT_VERSION="@PROJECT_VERSION@";
+inline const char * const PROJECT_DESCRIPTION="@PROJECT_DESCRIPTION@";
+inline const char * const PROJECT_HOMEPAGE_URL="@PROJECT_HOMEPAGE_URL@";
+
+#endif //_CONFIG_H_
+
