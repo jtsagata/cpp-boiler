@@ -7,7 +7,6 @@
 # '@PROJECT_NAME@' @PROJECT_DESCRIPTION@
 
 [![Travis build Status](@TRAVIS_URL@.svg?branch=master)](@TRAVIS_URL@/cpp-boilerplate)
-[![Appveyor build status](https://ci.appveyor.com/api/projects/status/63mnrl1am9plfc4f/branch/master?svg=true)](https://ci.appveyor.com/project/Lectem/boilerplate/branch/master)
 [![Coverage](https://codecov.io/gh/Lectem/cpp-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/Lectem/cpp-boilerplate)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/69eaa732d3484d7d83bea5464ab38287)](https://www.codacy.com/app/Lectem/cpp-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Lectem/cpp-boilerplate&amp;utm_campaign=Badge_Grade)
 [![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/Lectem/cpp-boilerplate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Lectem/cpp-boilerplate/context:cpp)
