@@ -8,7 +8,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 # Target: BoilerPlate                         #
 ###############################################
 
-set(BP_SOURCE_FILES main.cpp )
+set(BP_SOURCE_FILES main.cpp locale.cpp)
 set(BP_INCLUDE_FILES config.h)
 
             add_executable(BoilerPlate)
@@ -22,7 +22,7 @@ target_link_libraries(BoilerPlate
         #this will automatically setup the needed flags and dependencies when linking against this target
         # The following libraries are only linked for this target, and its flags/dependencies will not be used when linking against this target
         PRIVATE
-        fmt::fmt spdlog::spdlog
+        fmt::fmt spdlog::spdlog Boost::filesystem
         # It is possible to link some libraries for debug or optimized builds only
         #debug DEBUGLIBS
         #optimized RELEASELIBS

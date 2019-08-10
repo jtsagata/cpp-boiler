@@ -28,6 +28,9 @@
 #include <fmt/format.h>
 
 // This should be in the headers
+#include <libintl.h>
+void initNLS();
+#define _(STRING) gettext(STRING)
 
 /**
  * @brief A function that does nothing but generate documentation
@@ -37,8 +40,8 @@ int foo();
 
 int main(int argc, char *argv[]) {
   if (argc) {
-    fmt::print("hello world from '{}'!\n", PROJECT_NAME);
-    fmt::print("Executable : {}\n", argv[0]);
+    fmt::print(_("hello world from '{}'!\n"), PROJECT_NAME);
+    fmt::print(_("Executable : {}\n"), argv[0]);
 
   }
   return 0;

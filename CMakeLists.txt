@@ -8,12 +8,7 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
 endif()
 
 include(ProjectParameters.cmake)
-project("cpp-boiler"
-   VERSION ${VERSION}
-   DESCRIPTION ${DESCRIPTION}
-   HOMEPAGE_URL ${REPOSITORY_URL}
-   LANGUAGES CXX
-)
+project(${PACKAGE_NAME} VERSION ${VERSION} DESCRIPTION ${DESCRIPTION} HOMEPAGE_URL ${REPOSITORY_URL}  LANGUAGES CXX)
 
 configure_file( ${CMAKE_SOURCE_DIR}/support/.project_vars.sh.in
                 ${CMAKE_SOURCE_DIR}/support/project_vars.sh @ONLY)
