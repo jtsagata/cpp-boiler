@@ -21,31 +21,30 @@
 /** @file main.cpp
  * Just a simple hello world using libfmt
  */
-// The previous block is needed in every file for which you want to generate
-// documentation
 
 #include "config.h"
+#include "nls.h"
 #include <fmt/format.h>
+#include <boost/locale.hpp>
 
-// This should be in the headers
-#include <libintl.h>
-void initNLS();
-#define _(STRING) gettext(STRING)
+int main(int, char *argv[]) {
+  MoneyOutputter moneyFmt{};
 
-/**
- * @brief A function that does nothing but generate documentation
- * @return The answer to life, the universe and everything
- */
-int foo();
+  // This set the C++ locale
+  std::locale::global(std::locale(""));
+  // This sets the C locale
+  initNLS();
 
-int main(int argc, char *argv[]) {
-  if (argc) {
-    fmt::print(_("hello world from '{}'!\n"), PROJECT_NAME);
-    fmt::print(_("Executable : {}\n"), argv[0]);
 
-  }
+  fmt::print(_("Hello Worlds\n"));
+
+  fmt::print(_("Using locale  '{}'!\n"), std::locale("").name());
+  fmt::print(_("hello world from '{}'!\n"), PROJECT_NAME);
+  fmt::print(_("Executable : {}\n"), argv[0]);
+  fmt::print("A number without {} and with  {:n} locale\n", 20000000000000,
+             20000000000000);
+
+  fmt::print("Money without {} and with {} locale\n", -3.14,
+             moneyFmt.fmt(-3.14));
   return 0;
 }
-
-// Implementation
-int foo() { return 42; }

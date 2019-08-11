@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['foo',['foo',['../df/d0a/main_8cpp.html#a14bcd2d544b22300bba3863251393e0f',1,'main.cpp']]]
+  ['fmt',['fmt',['../d3/d2c/class_money_outputter.html#aad82b7bb5e0e88da6ea79b5c67f8570a',1,'MoneyOutputter']]]
 ];

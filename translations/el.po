@@ -1,0 +1,36 @@
+# Greek translations for cpp-boiler package.
+# Copyright (C) 2019 THE cpp-boiler'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the cpp-boiler package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cpp-boiler 0.0.1\n"
+"Report-Msgid-Bugs-To: https://jtsagata.github.io/cpp-boiler/issues\n"
+"POT-Creation-Date: 2019-08-11 22:31+0300\n"
+"PO-Revision-Date: 2019-08-11 21:44+0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /home/talos-mintOS/Projects/cpp-boiler/src/main.cpp:43
+msgid "Executable : {}\n"
+msgstr ""
+"\316\225\316\272\317\204\316\265\316\273\316\255\317\203\316\271\316\274\316\277 : "
+"{}\n"
+
+#: /home/talos-mintOS/Projects/cpp-boiler/src/main.cpp:39
+msgid "Hello Worlds\n"
+msgstr "Καλημέρα κόσμe!\n"
+
+#: /home/talos-mintOS/Projects/cpp-boiler/src/main.cpp:41
+msgid "Using locale  '{}'!\n"
+msgstr ""
+
+#: /home/talos-mintOS/Projects/cpp-boiler/src/main.cpp:42
+msgid "hello world from '{}'!\n"
+msgstr "Νέα απο το '{}'!\n"

@@ -8,8 +8,8 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 # Target: BoilerPlate                         #
 ###############################################
 
-set(BP_SOURCE_FILES main.cpp locale.cpp)
-set(BP_INCLUDE_FILES config.h)
+set(BP_SOURCE_FILES main.cpp nls.cpp)
+set(BP_INCLUDE_FILES config.h nls.h)
 
             add_executable(BoilerPlate)
             target_sources(BoilerPlate PRIVATE ${BP_SOURCE_FILES} ${BP_INCLUDE_FILES})

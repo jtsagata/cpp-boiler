@@ -75,5 +75,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 ##  Add Dubdirectories  ##
 ##########################
 add_subdirectory(src)
+add_subdirectory(translations)
 add_subdirectory(docs)
 

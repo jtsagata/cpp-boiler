@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]]
+  ['getexepath',['getExePath',['../d2/d36/nls_8h.html#a47001a6a70cbe0ca4ac1b6743e729ff1',1,'getExePath():&#160;nls.cpp'],['../d4/d83/nls_8cpp.html#a47001a6a70cbe0ca4ac1b6743e729ff1',1,'getExePath():&#160;nls.cpp']]],
+  ['getlocalepath',['getLocalePath',['../d2/d36/nls_8h.html#a9a400fd69756f7f043563f83a678eb12',1,'getLocalePath():&#160;nls.cpp'],['../d4/d83/nls_8cpp.html#a9a400fd69756f7f043563f83a678eb12',1,'getLocalePath():&#160;nls.cpp']]]
 ];

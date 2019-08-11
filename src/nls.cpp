@@ -18,19 +18,33 @@
 // along with cpp-boiler.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+#include "nls.h"
 #include "config.h"
 
 #include <string>
 #include <unistd.h>
 #include <climits>
+
+/** @file nls.cpp
+ * I18n support for main
+ */
+
 #include <boost/filesystem.hpp>
 
 namespace fs = boost::filesystem;
 
-/**
- * @brief Find where executable is on the filesystem
- * @return the path to the executable
- */
+
+std::string getLocalePath() {
+  auto path_string = getExePath();
+  auto dir = fs::path(path_string).parent_path();
+  auto locales = dir / "../share/locale";
+  return locales.string();
+}
+void initNLS() {
+  setlocale(LC_ALL, "");
+  bindtextdomain(TRANSLATIONS_DOMAIN, getLocalePath().c_str());
+  textdomain(TRANSLATIONS_DOMAIN);
+}
 std::string getExePath() {
   char result[PATH_MAX];
   ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
@@ -38,22 +52,15 @@ std::string getExePath() {
   return path_string;
 }
 
-/**
- * @brief Find the translation dirs according to GNU standards
- * @return the path to the executable
- */
-std::string getLocalePath() {
-  auto path_string = getExePath();
-  auto dir = fs::path(path_string).parent_path();
-  auto locales = dir / "../share/locale";
-  return locales.string();
+MoneyOutputter::MoneyOutputter(const char *const locale_name)
+    : loc(locale_name), output(std::use_facet<std::money_put<char>>(loc)),
+      iterator(os) {
+  os.imbue(loc);
+  os.setf(std::ios_base::showbase);
 }
 
-/**
- * @brief Call it from main to initialize NLS system
- */
-void initNLS() {
-  setlocale(LC_ALL, "");
-  bindtextdomain(TRANSLATIONS_DOMAIN, getLocalePath().c_str());
-  textdomain(TRANSLATIONS_DOMAIN);
+std::string MoneyOutputter::fmt(double value) {
+  os.str(""); // clear string
+  output.put(iterator, false, os, ' ', value * 100.0);
+  return os.str();
 }

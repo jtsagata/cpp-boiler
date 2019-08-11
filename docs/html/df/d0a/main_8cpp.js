@@ -1,5 +1,4 @@
 var main_8cpp =
 [
-    [ "foo", "df/d0a/main_8cpp.html#a14bcd2d544b22300bba3863251393e0f", null ],
-    [ "main", "df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97", null ]
+    [ "main", "df/d0a/main_8cpp.html#a97b0fa62b7b0972875f5f589322c4c24", null ]
 ];
